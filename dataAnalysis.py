@@ -6,35 +6,37 @@
 
 
 
-class Parent:
-	SET_SIZE = 5;
-	def __init__ (self, *args):
+# class Parent:
+# 	SET_SIZE = 5;
+# 	def __init__ (self, *args):
 		
-		shared = dict();
-		for i in range(0, SET_SIZE):
-			if(args[i].value != ""):
-				shared.insert(i,args[i])
+# 		shared = dict();
+# 		for i in range(0, SET_SIZE):
+# 			if(args[i].value != ""):
+# 				shared.insert(i,args[i])
 
-class transportationForm(Parent):
-	def __init__ (self, *args):
-
-
-
-
-class transportationForm (Parent):
-
-name/date/treatment facility/birthdate/address
-
-function populateForms(){
+# class transportationForm(Parent):
+# 	def __init__ (self, *args):
 
 
 
-};
 
-function createCSV(){
+# class transportationForm (Parent):
+
+# name/date/treatment facility/birthdate/address
+
+# function populateForms(){
 
 
 
-};
+# };
 
-createCSV();
+# function createCSV(){
+
+
+
+# };
+
+# createCSV();
+
+print("HELLLLLLOOOOOOOOOO")
