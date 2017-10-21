@@ -546,7 +546,7 @@
 			input[type="button"].special:hover,
 			button.special:hover,
 			.button.special:hover {
-				background-color: #5e83cf;
+				background-color: #f9570c;
 			}
 
 			input[type="submit"].special:active,
@@ -554,7 +554,7 @@
 			input[type="button"].special:active,
 			button.special:active,
 			.button.special:active {
-				background-color: #3966c0;
+				background-color: #f24c00;
 			}
 
 /* Form */
@@ -1856,7 +1856,7 @@
 					.wrapper.style2 input[type="button"].special:hover,
 					.wrapper.style2 button.special:hover,
 					.wrapper.style2 .button.special:hover {
-						background-color: #5e83cf;
+						background-color: #f9570c;
 					}
 
 					.wrapper.style2 input[type="submit"].special:active,
@@ -1864,7 +1864,7 @@
 					.wrapper.style2 input[type="button"].special:active,
 					.wrapper.style2 button.special:active,
 					.wrapper.style2 .button.special:active {
-						background-color: #3966c0;
+						background-color: #f24c00;
 					}
 
 			.wrapper.style2 label {
@@ -2054,7 +2054,7 @@
 /* Banner */
 
 	#banner {
-		background-color: #ff6924; ff6924
+		background-color: #ff6924;
 		color: #d1dcf1;
 		display: -moz-flex;
 		display: -webkit-flex;
