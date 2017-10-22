@@ -37,15 +37,15 @@
                                     </tr>
                                     <tr>    
                                         <td style="text-align: left">
-                                            <input type="radio" id="type-buspass" name="type" value="Bus Pass" />
+                                            <input type="radio" id="type-buspass" name="type" value="Bus Pass" required/>
                                             <label for="type-buspass">Bus Pass</label>
-                                            <input type="radio" id="type-DARtickets" name="type" value="D-A-R Tickets" />
+                                            <input type="radio" id="type-DARtickets" name="type" value="D-A-R Tickets" required/>
                                             <label for="type-DARtickets">D-A-R Tickets</label>
-                                            <input type="radio" id="type-cab" name="type" value="Cab" />
+                                            <input type="radio" id="type-cab" name="type" value="Cab" required/>
                                             <label for="type-cab">Cab</label>
-                                            <input type="radio" id="type-gas" name="type" value="Gas" />
+                                            <input type="radio" id="type-gas" name="type" value="Gas" required/>
                                             <label for="type-gas">Gas</label>
-                                            <input type="radio" id="type-other" name="type" value="Other" />
+                                            <input type="radio" id="type-other" name="type" value="Other" required/>
                                             <label for="type-other">Other</label>
                                         </td>
                                     </tr>
@@ -56,7 +56,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input type="text" name="treatmentfacility" id="treatmentfacility" value="" placeholder="Facility Name" />
+                                            <input type="text" name="treatmentfacility" id="treatmentfacility" value="" placeholder="Facility Name" required/>
                                         </td>
                                     </tr>
                                 </table>
@@ -65,8 +65,8 @@
                                         <td colspan=2><h4>Patient's Name:</h4></td>
                                     </tr>
                                     <tr>
-                                        <td><input type="text" name="firstname" id="firstname" value="" placeholder="First Name" /></td>
-                                        <td><input type="text" name="lastname" id="lastname" value="" placeholder="Last Name" /></td>
+                                        <td><input type="text" name="firstname" id="firstname" value="" placeholder="First Name" required/></td>
+                                        <td><input type="text" name="lastname" id="lastname" value="" placeholder="Last Name" required/></td>
                                     </tr>
                                 </table>
                                 <table>
@@ -75,18 +75,18 @@
                                     </tr>
                                     <tr>
                                         <td colspan=3>
-                                            <input type="text" name="address-street" id="address-street" value="" placeholder="Street Address" />
+                                            <input type="text" name="address-street" id="address-street" value="" placeholder="Street Address" required/>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input type="text" name="address-city" id="address-city" value="" placeholder="City" />
+                                            <input type="text" name="address-city" id="address-city" value="" placeholder="City" required/>
                                         </td>
                                         <td>
-                                            <input type="text" name="address-state" id="address-state" value="" placeholder="State" />
+                                            <input type="text" name="address-state" id="address-state" value="" placeholder="State" required/>
                                         </td>
                                         <td>
-                                            <input type="text" name="address-zip" id="address-zip" value="" placeholder="ZIP Code" />
+                                            <input type="text" name="address-zip" id="address-zip" value="" placeholder="ZIP Code" required/>
                                         </td>
                                     </tr>
                                 </table>
@@ -109,7 +109,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input type="text" name="socialworker" id="socialworker" value="" placeholder="Social Worker's Name" />
+                                            <input type="text" name="socialworker" id="socialworker" value="" placeholder="Social Worker's Name" required/>
                                         </td>
                                     </tr>
                                 </table>
@@ -119,7 +119,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <textarea type="message" name="financialneed" id="financialneed" value="" placeholder="State the results of exploring other resources"></textarea>
+                                            <textarea type="message" name="financialneed" id="financialneed" value="" placeholder="State the results of exploring other resources" required></textarea>
                                         </td>
                                     </tr>
                                 </table>
@@ -129,7 +129,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <textarea type="message" name="travelneed" id="travelneed" value="" placeholder="Identify the patient’s regular mode of transportation and state why it’s not available. What transportation assistance is being requested?"></textarea>
+                                            <textarea type="message" name="travelneed" id="travelneed" value="" placeholder="Identify the patient’s regular mode of transportation and state why it’s not available. What transportation assistance is being requested?" required></textarea>
                                         </td>
                                     </tr>
                                 </table>
@@ -140,10 +140,10 @@
                                     </tr>
                                     <tr>
                                         <td>
-								            <input type="text" name="provider" id="provider" value="" placeholder="Provider" />
+								            <input type="text" name="provider" id="provider" value="" placeholder="Provider" required/>
                                         </td>
                                         <td>
-                                            <input type="text" name="miles" id="miles" value="" placeholder="Miles" />
+                                            <input type="text" name="miles" id="miles" value="" placeholder="Miles" required/>
                                         </td>
                                     </tr>
                                 </table>
@@ -153,7 +153,7 @@
                                     </tr>
                                     <tr>
                                         <td class="month">
-                                            <select name="trip-month" id="trip-month">
+                                            <select name="trip-month" id="trip-month" required>
                                                 <option value="">Month</option>
                                                 <option value="01">January</option>
                                                 <option value="02">February</option>
@@ -170,7 +170,7 @@
                                             </select>
                                         </td>
                                         <td class="day">
-                                            <select name="trip-day" id="trip-day">
+                                            <select name="trip-day" id="trip-day" required>
                                                 <option value="">Day</option>
                                                 <option value="01">1</option>
                                                 <option value="02">2</option>
@@ -206,7 +206,7 @@
                                             </select>
                                         </td>
                                         <td class="year">
-                                            <input type="text" name="trip-year" id="trip-year" value="" placeholder="Year" />
+                                            <input type="text" name="trip-year" id="trip-year" value="" placeholder="Year" required/>
                                         </td>
                                     </tr>
                                 </table>
@@ -216,7 +216,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-								            <input type="text" name="cost" id="cost" value="" placeholder="Cost" />
+								            <input type="text" name="cost" id="cost" value="" placeholder="Cost" required/>
                                         </td>
                                     </tr>
                                 </table>
@@ -237,10 +237,10 @@
                                     </tr>
                                     <tr>
                                         <td>
-								            <input type="text" name="origin" id="origin" value="" placeholder="Origin" />
+								            <input type="text" name="origin" id="origin" value="" placeholder="Origin" required />
                                         </td>
                                         <td>
-                                            <input type="text" name="destination" id="destination" value="" placeholder="Destination" />
+                                            <input type="text" name="destination" id="destination" value="" placeholder="Destination" required />
                                         </td>
                                     </tr>
                                 </table>
@@ -248,7 +248,7 @@
                                 <table>
                                     <tr>
                                         <td>
-								            <input type="submit" value="Submit" class="special" />
+								            <input type="submit" value="Submit" class="special" required/>
                                         </td>
                                     </tr>
                                 </table>
