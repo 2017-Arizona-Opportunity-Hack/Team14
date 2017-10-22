@@ -22,17 +22,17 @@ def financial():
 @app.route('/medicationsFormSubmit', methods=['POST'])
 def medicationsFormSubmit():
     kidneyData.start(json.dumps(request.form), 1)
-    return render_template('responsePage.html')
+    return render_template('response.html')
 
 @app.route('/transportationFormSubmit', methods=['POST'])
 def transportationFormSubmit():
     kidneyData.start(json.dumps(request.form), 2)
-    return render_template('responsePage.html')
+    return render_template('response.html')
 
 @app.route('/financialFormSubmit', methods=['POST'])
 def financialFormSubmit():
     kidneyData.start(json.dumps(request.form), 3)
-    return render_template('responsePage.html')
+    return render_template('response.html')
 
 @app.route('/thanksFormSubmit', methods=['POST'])
 def thanksFormSubmit():
