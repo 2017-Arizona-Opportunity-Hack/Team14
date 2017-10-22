@@ -4,7 +4,7 @@
 # 4: Date of Birth
 # 5 Treatment Facility
 
-
+import csv
 
 class Parent:
     def __init__(self, fName, midInitial, lName, dob, treatFac):
@@ -18,28 +18,34 @@ class transportationForm(Parent):
 
         shared = dict(Parent.shared)
 
-        shared.append({'Transportation Type': transType, 'Address': address, 'Financial Information': financialInformation,
+        individual = shared.append({'Transportation Type': transType, 'Address': address, 'Financial Information': financialInformation,
                        'Social Worker Name': socialWorkerName, 'Social Worker Signature': socialWorkerSignature,
                        'Financial Need Description': financialNeedDescription, 'Transportation Provider': transportationProvider,
                        'Trip Date': tripDate, 'Trip Cost': tripCost, 'Trip Origin': tripOrigin, 'Trip Destination': tripDestination,
                        'Travel Description': travelDescription})
 
-        print (shared + "Transportation Type: " + transType + "\nAddress: " + address + "\nFinancial Information: " + financialInformation +
-               "\nSocial Worker Signature: " + socialWorkerSignature + "\nFinancial Need Description: " + financialNeedDescription +
-               "\nTransportation Provider: " + transportationProvider + "\nTrip Date: " + tripDate + "\nTrip Cost: " + tripCost +
-               "\nTrip Origin: " + tripOrigin + "\nTrip Destination" + tripDestination + "\nTravel Description: " + travelDescription)
+        columnTitleRow = "Transportation Type, Address, Financial Information, Social Worker Name, Social Worker Signature, Financial Need Description" \
+                         "Transportation Provider, Trip Date, Trip Cost, Trip Origin, Trip Destination, Travel Description\n"
+        csv.write(columnTitleRow)
 
+        with open('mycsvfile.csv', 'wb') as f:
+            w = csv.writer(f)
+            w.writerow(individual.values())
 class medForm(Parent):
     def __init__(self, address, financialInformation, socialWorkerName,
                  medicationName, prescribingPhysician, dosage, dateApplied, quantities, refills, accepted):
 
         shared = dict(Parent.shared)
 
-        shared.append(
+        individual = shared.append(
             {'Address': address, 'Financial Information': financialInformation, 'Social Worker Name': socialWorkerName, 'Medication Name':
              medicationName, 'Prescribing Physician': prescribingPhysician, 'Dosage': dosage, 'Date Applied': dateApplied, 'Quantities': quantities,
              'Refills': refills, 'Accepted': accepted})
 
-        print ("Address: " + address + "\nFinancial Information: " + financialInformation + "\nSocial Worker Name: " + socialWorkerName + "\nMedication Name: "
-             + medicationName + "\nPrescribing Physician: " + prescribingPhysician + "\nDosage: " + dosage + "\nDate Applied: " + dateApplied +  "\nQuantities: " + quantities +
-             "\nRefills: " + refills + "\nAccepted: " + accepted)
+        columnTitleRow = "Address, Financial Information, Social Worker Name, Medication Name, Prescribing Physician, Dosage," \
+                         "Date Applied, Quantities, Refills, Accepted"
+        csv.write(columnTitleRow)
+
+        with open('mycsvfile.csv', 'wb') as f:
+            w = csv.writer(f)
+            w.writerow(individual.values())
