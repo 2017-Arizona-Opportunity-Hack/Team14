@@ -1,5 +1,11 @@
-import csv
-import json
+import csv, json, smtplib, mimetypes
+from email.mime.multipart import MIMEMultipart
+from email import encoders
+from email.message import Message
+from email.mime.audio import MIMEAudio
+from email.mime.base import MIMEBase
+from email.mime.image import MIMEImage
+from email.mime.text import MIMEText
 
 
 class form():
@@ -24,6 +30,38 @@ class form():
                 w.writerow(dictionary.keys())
                 w.writerow(dictionary.values())
             f.close()
+            
+            #attempt to send an email with the phantom email server
+            emailfrom = "smptsohacktest@gmail.com"
+            emailto = "bailey.garner15@gmail.com"
+            fileToSend = dictionary['lastname'] + dictionary['firstname'] + str
+            username = "smptsohacktest"
+            password = "Ohackteam14"
+
+            msg = MIMEMultipart()
+            msg["From"] = emailfrom
+            msg["To"] = emailto
+            msg["Subject"] = "Form Submission"
+            msg.preamble = ""
+
+            ctype, encoding = mimetypes.guess_type(fileToSend)
+            if ctype is None or encoding is not None:
+                ctype = "application/octet-stream"
+
+            maintype, subtype = ctype.split("/", 1)
+
+            fp = open(fileToSend, "rb")
+            attachment = MIMEBase(maintype, subtype)
+            attachment.set_payload(fp.read())
+            fp.close()
+            encoders.encode_base64(attachment)
+            attachment.add_header("Content-Disposition", "attachment", filename=fileToSend)
+            msg.attach(attachment)
+            server = smtplib.SMTP("smtp.gmail.com:587")
+            server.starttls()
+            server.login(username,password)
+            server.sendmail(emailfrom, emailto, msg.as_string())
+            server.quit()
 
 
 def start(jsonString, formNum):
