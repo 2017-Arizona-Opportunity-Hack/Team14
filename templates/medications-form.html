@@ -106,29 +106,11 @@
                                 </table>
                                 <table>
                                     <tr>
-                                        <td colspan=3><h4>Social Security Number:</h4></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="password" name="ssn1" id="ssn1" value="" placeholder="XXX" />
-                                        </td>
-                                        <td>-</td>
-                                        <td>
-                                            <input type="password" name="ssn2" id="ssn2" value="" placeholder="XXX" />
-                                        </td>
-                                        <td>-</td>
-                                        <td>
-                                            <input type="password" name="ssn3" id="ssn3" value="" placeholder="XXXX" />
-                                        </td>
-                                    </tr>
-                                </table>
-                                <table>
-                                    <tr>
                                         <td><h4>Phone Number:</h4></td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input type="text" name="phonenumber" id="phonenumber" value="" placeholder="XXXXXXXXXX" />
+                                            <input type="text" name="phonenumber" id="phonenumber" value="" placeholder="Phone Number" />
                                         </td>
                                     </tr>
                                 </table>
@@ -491,19 +473,6 @@
                  document.getElementById("medication-status-denied").checked = false;
                  document.getElementById("medication-covered-yes").checked = false;
                  document.getElementById("medication-covered-no").checked = false;
-            }
-
-            function onClick() {
-                $.ajax({
-                    url: 'medication-application-analysis',
-                    type: 'POST',
-                    dataType:"json", 
-                    data: {
-                        email_one: 4,
-                        email_two: 5,
-                        description:7
-                    },
-                });
             }
           
         </script>
