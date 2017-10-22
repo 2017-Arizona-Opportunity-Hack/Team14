@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Forms</title>
+</head>
+<body>
+
+    <form name="formsToFill" id="formsToFill" onsubmit='makePath(this);'>
+        <div>
+            <label for="forms">Please choose forms to complete: </label>
+        </div>
+        <div>
+            <select name="forms" id="forms" autofocus="autofocus" form="formsToFill" required="required">
+                <option id = "1" value="transportation">Transportation</option>
+                <option id = "2" value="medication-application">MEDS Application</option>
+                <option id = "3" value="english-financial">Financial (English)</option>
+                <option id = "4" value="carPmt">Car Payment/Repair Consent</option>
+                <option id = "4" value="dental">Dental Application</option>
+                <option id = "5" value="spanishFinancial">Financial (Spanish)</option>
+                <option id = "6" value="MEDSTPlant">MEDS Transplant Medications</option>
+                <option id = "7" value="renalRegistry">Renal Registry</option>
+                <option id = "8" value="rentConsent">Rent Consent</option>
+                <option id = "9" value="scholarship">Scholarship Application</option>
+            </select>
+        </div>
+        <div>
+            <input type="submit" />
+        </div>
+    </form>
+    
+    <script type="text/javascript">
+        
+        var makePath = function(form) {
+            form.action = document.getElementById('forms').value;
+        };
+    </script>
+</body>
+
+</html>
