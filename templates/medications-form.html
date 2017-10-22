@@ -37,8 +37,8 @@
                                         <td colspan=2><h4>Name:</h4></td>
                                     </tr>
                                     <tr>
-                                        <td><input type="text" name="firstname" id="firstname" value="" placeholder="First Name" /></td>
-                                        <td><input type="text" name="lastname" id="lastname" value="" placeholder="Last Name" /></td>
+                                        <td><input type="text" name="firstname" id="firstname" value="" placeholder="First Name" required/></td>
+                                        <td><input type="text" name="lastname" id="lastname" value="" placeholder="Last Name" required/></td>
                                     </tr>
                                 </table>
                                 <table>
@@ -47,7 +47,7 @@
                                     </tr>
                                     <tr>
                                         <td class="month">
-                                            <select name="dob-month" id="dob-month">
+                                            <select name="dob-month" id="dob-month" required>
                                                 <option value="">Month</option>
                                                 <option value="01">January</option>
                                                 <option value="02">February</option>
@@ -64,7 +64,7 @@
                                             </select>
                                         </td>
                                         <td class="day">
-                                            <select name="dob-day" id="dob-day">
+                                            <select name="dob-day" id="dob-day" required>
                                                 <option value="">Day</option>
                                                 <option value="01">1</option>
                                                 <option value="02">2</option>
@@ -100,7 +100,7 @@
                                             </select>
                                         </td>
                                         <td class="year">
-                                            <input type="text" name="dob-year" id="dob-year" value="" placeholder="Year" />
+                                            <input type="text" name="dob-year" id="dob-year" value="" placeholder="Year" max="9999" min="1900" required/>
                                         </td>
                                     </tr>
                                 </table>
@@ -110,7 +110,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input type="text" name="phonenumber" id="phonenumber" value="" placeholder="Phone Number" />
+                                            <input type="text" name="phonenumber" id="phonenumber" value="" placeholder="Phone Number" minlength = '10' maxlength='11' required/>
                                         </td>
                                     </tr>
                                 </table>
@@ -120,18 +120,18 @@
                                     </tr>
                                     <tr>
                                         <td colspan=3>
-                                            <input type="text" name="address-street" id="address-street" value="" placeholder="Street Address" />
+                                            <input type="text" name="address-street" id="address-street" value="" placeholder="Street Address" required/>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input type="text" name="address-city" id="address-city" value="" placeholder="City" />
+                                            <input type="text" name="address-city" id="address-city" value="" placeholder="City" required/>
                                         </td>
                                         <td>
-                                            <input type="text" name="address-state" id="address-state" value="" placeholder="State" />
+                                            <input type="text" name="address-state" id="address-state" value="" placeholder="State" required/>
                                         </td>
                                         <td>
-                                            <input type="text" name="address-zip" id="address-zip" value="" placeholder="ZIP Code" />
+                                            <input type="text" name="address-zip" id="address-zip" value="" placeholder="ZIP Code" required/>
                                         </td>
                                     </tr>
                                 </table>
@@ -141,7 +141,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input type="text" name="treatmentfacility" id="treatmentfacility" value="" placeholder="Facility Name" />
+                                            <input type="text" name="treatmentfacility" id="treatmentfacility" value="" placeholder="Facility Name" required/>
                                         </td>
                                     </tr>
                                 </table>
@@ -151,7 +151,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input type="text" name="socialworker" id="socialworker" value="" placeholder="Social Worker's Name" />
+                                            <input type="text" name="socialworker" id="socialworker" value="" placeholder="Social Worker's Name" required/>
                                         </td>
                                     </tr>
                                 </table>
@@ -161,9 +161,9 @@
                                     </tr>
                                     <tr>
                                         <td style="float:left">
-                                            <input type="radio" id="financialonfile-yes" name="financialonfile" value="yes" />
+                                            <input type="radio" id="financialonfile-yes" name="financialonfile" value="yes" required/>
                                             <label for="financialonfile-yes">Yes</label>
-                                            <input type="radio" id="financialonfile-no" name="financialonfile" value="no"/>
+                                            <input type="radio" id="financialonfile-no" name="financialonfile" value="no" required/>
                                             <label for="financialonfile-no">No</label>
                                         </td>
                                     </tr>
@@ -174,7 +174,7 @@
                                     </tr>
                                     <tr>
                                         <td class="month">
-                                            <select name="transplant-month" id="transplant-month">
+                                            <select name="transplant-month" id="transplant-month" required>
                                                 <option value="">Month</option>
                                                 <option value="01">January</option>
                                                 <option value="02">February</option>
@@ -191,7 +191,7 @@
                                             </select>
                                         </td>
                                         <td class="day">
-                                            <select name="transplant-day" id="transplant-day">
+                                            <select name="transplant-day" id="transplant-day" required>
                                                 <option value="">Day</option>
                                                 <option value="01">1</option>
                                                 <option value="02">2</option>
@@ -227,7 +227,7 @@
                                             </select>
                                         </td>
                                         <td class="year">
-                                            <input type="text" name="transplant-year" id="transplant-year" value="" placeholder="Year" />
+                                            <input type="text" name="transplant-year" id="transplant-year" value="" placeholder="Year" required/>
                                         </td>
                                     </tr>
                                 </table>
