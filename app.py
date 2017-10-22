@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template('FormSelection.html')
+    return render_template('form-selection.html')
 
 @app.route("/transportation")
 def transportation():
@@ -12,7 +12,7 @@ def transportation():
   
 @app.route('/medication-application')
 def signUp():
-	return render_template('medications-application-form.html')
+	return render_template('medications-form.html')
 
 @app.route("/english-financial")
 def financial():
