@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Forms</title>
+</head>
+<body>
+
+    <form name="formsToFill" id="formsToFill" action=document.getElementById('forms').value()>
+        <div>
+            <label for="forms">Please choose forms to complete: </label>
+        </div>
+        <div>
+            <select name="forms" id="forms" autofocus="autofocus" form="formsToFill" required="required">
+                <option value="transportation">Transportation</option>
+                <option value="medication-application">MEDS Application</option>
+                <option value="englishFinancial">Financial (English)</option>
+                <option value="carPmt">Car Payment/Repair Consent</option>
+                <option value="dental">Dental Application</option>
+                <option value="spanishFinancial">Financial (Spanish)</option>
+                <option value="MEDSTPlant">MEDS Transplant Medications</option>
+                <option value="renalRegistry">Renal Registry</option>
+                <option value="rentConsent">Rent Consent</option>
+                <option value="scholarship">Scholarship Application</option>
+            </select>
+        </div>
+        <div>
+            <input type="submit">
+        </div>
+    </form>
+    
+    <script type="text/javascript">
+        
+        function findForm() {
+            
+            var location = document.getElementById('forms').value();
+            
+        }
+    </script>
+</body>
+
+</html>
