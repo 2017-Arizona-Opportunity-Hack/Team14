@@ -24,7 +24,9 @@
                     <h2>Form Selection</h2>
                 </header>
                 <form name="formsToFill" id="formsToFill" onsubmit='makePath(this);'>
-                    <h4>Please choose a form to complete<h4>
+                    <div>
+                        <h4>Please choose a form to complete</h4>
+                    </div>
                     <div>
                         <select name="forms" id="forms" autofocus="autofocus" form="formsToFill" required="required" style="width:100%">
                             <option id = "1" value="transportation">Transportation</option>
@@ -39,11 +41,13 @@
                             <option id = "9" value="scholarship">Scholarship Application</option>
                         </select>
                     </div>
-                    <div>
+                    <div style="padding:10px">
                         <input type="submit"/>
                     </div>
                 </form>
-        
+            </section>
+        </div>
+    </section>
     <script type="text/javascript">
         
         var makePath = function(form) {
