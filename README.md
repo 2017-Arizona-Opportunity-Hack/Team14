@@ -19,12 +19,12 @@ Our web forms run on a web server using Flask. To start up the web server, simpl
 
 On macOS or Linux systems, install Python 3 and pip3, then install flask and flask-compress using Terminal with the following command:
 ```
-pip3 install flask
-pip3 install flask-compress
+$ pip3 install flask
+$ pip3 install flask-compress
 ```
 Then, cd into the directory that contains the project and execute the app file with the following command:
 ```
-python3 app.py
+$ python3 app.py
 ```
 ## Deployment
 
