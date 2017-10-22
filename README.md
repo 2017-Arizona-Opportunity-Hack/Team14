@@ -26,12 +26,12 @@ python3 app.py
 ```
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+Our system is currently deployed on an Ubuntu server hosted by Digital Ocean; however, our flask application can easily be deployed on a variety of different systems.
 
 ## Built With
 
 * [Flask](http://flask.pocoo.org) - Python Microframework
-* [Pixelarity](https://pixelarity.com) - HTML 5 Templates
+* [Pixelarity](https://pixelarity.com) - HTML 5 Responsive Design Layout
 
 ## Authors
 
