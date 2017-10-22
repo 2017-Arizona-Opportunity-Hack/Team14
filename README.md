@@ -16,7 +16,7 @@ Our web forms run on a web server using Flask. To start up the web server, simpl
 
 ### Installing
 
-On macOS, install Python 3, then install flask using Terminal with the following command:
+On macOS or Linux systems, install Python 3, then install flask using Terminal with the following command:
 ```
 pip3 install flask
 ```
