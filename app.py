@@ -1,3 +1,6 @@
+# Copyright (c) 2015 by Armin Ronacher and contributors. 
+# Read more at http://flask.pocoo.org/
+
 from flask import Flask, render_template, jsonify, request
 from flask_compress import Compress
 import csv, backend, json
