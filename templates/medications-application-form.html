@@ -11,6 +11,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
         <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
 	<body>
@@ -392,7 +394,7 @@
                                     <tr>
                                         <td>
                                             <input type="button" value="Add Another Medication" onClick="addMedication()" />
-								            <input type="submit" value="Submit" class="special" onClick="run()" />
+								            <input type="submit" value="Submit" class="special" onclick="onClick()" />
                                         </td>
                                     </tr>
                                 </table>
@@ -493,8 +495,23 @@
             //     document.getElementById("medication-covered-no").checked = false;
             // }
 
+
             alert("HI");
-        }
+
+            var data = {4: "five"};
+            function onClick() {
+                alert("In AJAX");
+                    $.ajax({
+                    
+                    url: "app.py",
+                    data: data,
+
+                    });
+
+            }
+            alert("HI");
+          
+        //}
         </script>
         <script src="{{url_for('static', filename='assets/js/jquery.min.js')}}"></script>
         <script src="{{url_for('static', filename='assets/js/jquery.scrolly.min.js')}}"></script>

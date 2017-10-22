@@ -10,23 +10,13 @@ def index():
 def transportation():
     return render_template('transportation-form.html')
   
-@app.route("/medication-application")
+@app.route('/medication-application')
 def signUp():
-    return render_template('medications-application-form.html')
-
-@app.route("/medication-application", methods=['POST'])
-def find():
-    print(cool);
+	return render_template('medications-application-form.html')
 
 @app.route("/english-financial")
 def financial():
     return render_template('financial-form.html');
-
-@app.route('/_add_numbers')
-def add_numbers():
-    a = request.args.get('a', 0, type=int)
-    b = request.args.get('b', 0, type=int)
-    return jsonify(result=a + b)
 
 if __name__ == '__main__':
     app.run()
