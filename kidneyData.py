@@ -21,6 +21,11 @@ class form():
                 str = 'transportationform.csv'
             elif formNum == 3:
                 str = 'financialform.csv'
+			#******************Add New Form info here*****************
+			
+			#elif formNum == num: add more form names here with the associated key when the script is ran
+			
+			#******************Finish New Form info here**************
             else:
                 str = 'form.csv'
 
@@ -32,7 +37,8 @@ class form():
                 w.writerow(dictionary.values())
             f.close()
             
-            #attempt to send an email with the phantom email server
+            #sends an email with the csv file attached. Uses Gmail Server currently
+			#username and password is gmail login
             emailfrom = "smptsohacktest@gmail.com"
             emailto = "bailey.garner15@gmail.com"
             fileToSend = dictionary['lastname'] + dictionary['firstname'] + str

@@ -19,6 +19,24 @@ def medications():
 def financial():
     	return render_template('financial-form.html')
 
+#************Add New Form Info here****************
+
+#name of form should replace all instances of myForm in this block
+#route here has to be the value of the of the dropdown in the form-selection.html for this form
+
+#@app.route('/myForm')
+#def myForm():
+#    	return render_template('myForm.html')
+		
+#route here has to be the URL in the action on submit in the form's html
+
+#@app.route('/myFormSubmit', methods=['POST'])
+#def myFormSubmit():
+#    kidneyData.start(json.dumps(request.form), 4) #this number is passed in and links up with the python script that is run to display the correct form type in the email.
+#   return render_template('response.html')
+
+#************End of Add New Form******************
+
 @app.route('/medicationsFormSubmit', methods=['POST'])
 def medicationsFormSubmit():
     kidneyData.start(json.dumps(request.form), 1)
