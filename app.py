@@ -8,11 +8,16 @@ def index():
 
 @app.route("/transportation")
 def transportation():
-    return render_template('transportation-form.html')
+    alert("I AM IN FLASH")
+    return render_template('transportation-form.html');
   
 @app.route('/medication-application')
 def signUp():
-	return render_template('medications-application-form.html')
+    return render_template('medications-application-form.html')
+
+@app.route('/medication-application-analysis', methods = ['POST'])
+def cool():
+    return render_template('FormSelection.html');
 
 @app.route("/english-financial")
 def financial():

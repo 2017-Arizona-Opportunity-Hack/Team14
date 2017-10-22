@@ -502,14 +502,21 @@
             function onClick() {
                 alert("In AJAX");
                     $.ajax({
-                    
-                    url: "app.py",
-                    data: data,
+                        url: 'medication-application-analysis',
+                        type: 'POST',
+                        dataType:"json", 
+                        data: {
+                          email_one: 4,
+                         email_two: 5,
+                          description:7,
 
-                    });
+                     },
+
+         
+                });
+            alert("HI");
 
             }
-            alert("HI");
           
         //}
         </script>
