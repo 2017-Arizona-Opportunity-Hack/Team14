@@ -138,7 +138,7 @@
                                     </tr>
                                     <tr>
                                         <td colspan=3>
-                                            <input type="text" name="address-street1" id="address-street1" value="" placeholder="Street Address" />
+                                            <input type="text" name="address-street" id="address-street" value="" placeholder="Street Address" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -321,6 +321,63 @@
             </section>
 
         <!-- Scripts -->  
+        <script type="text/javascript">
+            
+            function run() {
+                
+                var dataObject = {
+                    "type" : "",
+                    "today-month" : document.getElementById("today-month").value,
+                    "today-day" : document.getElementById("today-day").value,
+                    "today-year" : document.getElementById("today-year").value,
+                    "treatmentfacility" : document.getElementById("treatmentfacility").value,
+                    "firstname" : document.getElementById("firstname").value,
+                    "lastname" : document.getElementById("lastname").value,
+                    "address-street" : document.getElementById("address-street").value,
+                    "address-city" : document.getElementById("address-city").value,
+                    "address-state" : document.getElementById("address-state").value,
+                    "address-zip" : document.getElementById("address-zip").value,
+                    "financialonfile" : "",
+                    "socialworker" : document.getElementById("socialworker").value,
+                    "financialneed" : document.getElementById("financialneed").value,
+                    "travelneed" : document.getElementById("travelneed").value,
+                    "provider" : document.getElementById("provider").value,
+                    "miles" : document.getElementById("miles").value,
+                    "trip-month" : document.getElementById("trip-month").value,
+                    "trip-day" : document.getElementById("trip-day").value,
+                    "trip-year" : document.getElementById("trip-year").value,
+                    "cost" : document.getElementById("cost").value,
+                    "triptype" : "",
+                    "origin" : document.getElementById("origin").value,
+                    "destination" : document.getElementById("destination").value
+                }
+                
+                if (document.getElementById("type-buspass").checked) {
+                    dataObject.type = "Bus Pass";
+                } else if (document.getElementById("type-DARtickets").checked) {
+                    dataObject.type = "D-A-R Tickets";
+                } else if (document.getElementById("type-cab").checked) {
+                    dataObject.type = "Cab";
+                } else if (document.getElementById("type-gas").checked) {
+                    dataObject.type = "Gas";
+                } else if (document.getElementById("type-other").checked) {
+                    dataObject.type = "Other";
+                }
+                
+                if (document.getElementById("financialonfile-yes").checked) {
+                    dataObject.financialonfile = "yes";
+                } else if (document.getElementById("financialonfile-no").checked) {
+                    dataObject.financialonfile = "no";
+                }
+                
+                if (document.getElementById("triptype-oneway").checked) {
+                    dataObject.triptype = "One-Way";
+                } else if (document.getElementById("triptype-roundtrip").checked) {
+                    dataObject.triptype = "Round Trip";
+                }
+            }
+            
+        </script>
         <script src="{{url_for('static', filename='assets/js/script.js')}}"></script>
         <script src="{{url_for('static', filename='assets/js/jquery.min.js')}}"></script>
         <script src="{{url_for('static', filename='assets/js/jquery.scrolly.min.js')}}"></script>
