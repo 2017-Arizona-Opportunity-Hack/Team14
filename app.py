@@ -34,8 +34,8 @@ def financialFormSubmit():
     kidneyData.start(json.dumps(request.form), 3)
     return render_template('response.html')
 
-@app.route('/thanksFormSubmit', methods=['POST'])
-def thanksFormSubmit():
+@app.route('/returnHome', methods=['POST'])
+def returnHome():
     return render_template('form-selection.html')
 
 if __name__ == '__main__':

@@ -10,7 +10,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />		
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
 	<body>
 
@@ -29,16 +30,18 @@
 							<header class="major">
                                 <h2>Thank You!</h2>
 							</header>
-							<form action="{{url_for('thanksFormSubmit') }}" method="post">
+							<form action="{{url_for('returnHome') }}" method="post">
                                 <table>
                                     <tr>
                                         <td>
-                                             <h2>Thank you for filling out this form. </h2>
+                                             <h2>Your form has been sucessfully submitted.</h2>
                                         </td>
                                     </tr>
+                                </table>
+                                <table>
                                     <tr>
                                         <td>
-                                            <input type="submit" value="Go Home" class="special" />
+                                            <input type="submit" value="Go Home" />
                                         </td>
                                     </tr>
                                 </table>
@@ -47,7 +50,7 @@
                 </div>
             </section>
             
-        </script>
+        <!-- Scripts -->
         <script src="{{url_for('static', filename='assets/js/jquery.min.js')}}"></script>
         <script src="{{url_for('static', filename='assets/js/jquery.scrolly.min.js')}}"></script>
         <script src="{{url_for('static', filename='assets/js/skel.min.js')}}"></script>
