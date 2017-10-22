@@ -9,11 +9,10 @@
 		<title>National Kidney Foundation of Arizona</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><script src="{{ url_for('static', filename='assets/js/ie/html5shiv.js') }}"></script><![endif]-->
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/ie9.css') }}" /><![endif]-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	</head>
 	<body>
 
@@ -49,7 +48,7 @@
                                     <tr>
                                         <td class="month">
                                             <select name="dob-month" id="dob-month">
-                                                <option value="00">Month</option>
+                                                <option value="">Month</option>
                                                 <option value="01">January</option>
                                                 <option value="02">February</option>
                                                 <option value="03">March</option>
@@ -66,7 +65,7 @@
                                         </td>
                                         <td class="day">
                                             <select name="dob-day" id="dob-day">
-                                                <option value="00">Day</option>
+                                                <option value="">Day</option>
                                                 <option value="01">1</option>
                                                 <option value="02">2</option>
                                                 <option value="03">3</option>
@@ -194,7 +193,7 @@
                                     <tr>
                                         <td class="month">
                                             <select name="transplant-month" id="transplant-month">
-                                                <option value="00">Month</option>
+                                                <option value="">Month</option>
                                                 <option value="01">January</option>
                                                 <option value="02">February</option>
                                                 <option value="03">March</option>
@@ -211,7 +210,7 @@
                                         </td>
                                         <td class="day">
                                             <select name="transplant-day" id="transplant-day">
-                                                <option value="00">Day</option>
+                                                <option value="">Day</option>
                                                 <option value="01">1</option>
                                                 <option value="02">2</option>
                                                 <option value="03">3</option>
@@ -303,7 +302,7 @@
                                         <tr>
                                             <td class="month">
                                                 <select name="medication-dateapplied-month" id="medication-dateapplied-month">
-                                                    <option value="00">Month</option>
+                                                    <option value="">Month</option>
                                                     <option value="01">January</option>
                                                     <option value="02">February</option>
                                                     <option value="03">March</option>
@@ -320,7 +319,7 @@
                                             </td>
                                             <td class="day">
                                                 <select name="medication-dateapplied-day" id="medication-dateapplied-day">
-                                                    <option value="00">Day</option>
+                                                    <option value="">Day</option>
                                                     <option value="01">1</option>
                                                     <option value="02">2</option>
                                                     <option value="03">3</option>
@@ -399,7 +398,6 @@
                                     </tr>
                                 </table>
 							</form>
-                            <div id="results"></div>
                     </section>
                 </div>
             </section>
@@ -483,8 +481,8 @@
             //     document.getElementById("medication-dosage").value = "";
             //     document.getElementById("medication-quantity").value = "";
             //     document.getElementById("medication-physician").value = "";
-            //     document.getElementById("medication-dateapplied-month").value = "00";
-            //     document.getElementById("medication-dateapplied-day").value = "00";
+            //     document.getElementById("medication-dateapplied-month").value = "";
+            //     document.getElementById("medication-dateapplied-day").value = "";
             //     document.getElementById("medication-dateapplied-year").value = "";
             //     document.getElementById("medication-refills-yes").checked = false;
             //     document.getElementById("medication-refills-no").checked = false;
@@ -524,10 +522,8 @@
         <script src="{{url_for('static', filename='assets/js/jquery.scrolly.min.js')}}"></script>
         <script src="{{url_for('static', filename='assets/js/skel.min.js')}}"></script>
         <script src="{{url_for('static', filename='assets/js/util.js')}}"></script>
-        <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+        <!--[if lte IE 8]><script src="{{url_for('static', filename='assets/js/ie/respond.min.js')}}"></script><![endif]-->
         <script src="{{url_for('static', filename='assets/js/main.js')}}"></script>
-
-
 
     </body>
 </html>
