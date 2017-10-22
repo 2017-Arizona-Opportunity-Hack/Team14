@@ -27,13 +27,22 @@
 
 						<section id="one" class="special">
 							<header class="major">
-                                <h2>Thank You</h2>
+                                <h2>Thank You!</h2>
 							</header>
-							<form form action="{{url_for('thanksFormSubmit')}}">
-                                
-                                <h1>We appreciate you taking the time to fill out this form. </h1>
-                                <input type="submit" value="Submit" class="special" />
-							</form>
+							<form action="{{url_for('thanksFormSubmit') }}" method="post">
+                                <table>
+                                    <tr>
+                                        <td>
+                                             <h2>Thank you for filling out this form. To learn more about the National Kidney Foundation of Arizona, go to <a href = "https://azkidney.org/">https://azkidney.org/</a></h2>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="submit" value="Go Home" class="special" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
                     </section>
                 </div>
             </section>
