@@ -7,6 +7,7 @@ from email.mime.base import MIMEBase
 from email.mime.image import MIMEImage
 from email.mime.text import MIMEText
 
+import os
 
 class form():
 
@@ -63,6 +64,7 @@ class form():
             server.sendmail(emailfrom, emailto, msg.as_string())
             server.quit()
 
+            os.remove(fileToSend)
 
 def start(jsonString, formNum):
     python_object = json.loads(jsonString)
