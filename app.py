@@ -4,6 +4,6 @@ app = Flask(__name__)
   
 @app.route("/")
 def signUp():
-    return render_template('medications-applicationform.html')
+    return render_template('medications-application-form.html')
 
 app.run()
