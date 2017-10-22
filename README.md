@@ -33,6 +33,7 @@ Our system is currently deployed on an Ubuntu server hosted by Digital Ocean; ho
 ## Built With
 
 * [Flask](http://flask.pocoo.org) - Python Microframework (BSD License)
+* [Flask-compress](https://github.com/libwilliam/flask-compress) - Flask extension for file compression (MIT License)
 * [Pixelarity](https://pixelarity.com) - HTML 5 Responsive Design Layout [(License)](https://pixelarity.com/license)
 
 ## Authors
