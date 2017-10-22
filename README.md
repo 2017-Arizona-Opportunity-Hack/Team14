@@ -13,12 +13,14 @@ Our web forms run on a web server using Flask. To start up the web server, simpl
 
 * Python 3
 * Flask v0.12.2
+* Flask-Compress
 
 ### Installing
 
-On macOS or Linux systems, install Python 3, then install flask using Terminal with the following command:
+On macOS or Linux systems, install Python 3 and pip3, then install flask and flask-compress using Terminal with the following command:
 ```
 pip3 install flask
+pip3 install flask-compress
 ```
 Then, cd into the directory that contains the project and execute the app file with the following command:
 ```
@@ -30,8 +32,8 @@ Our system is currently deployed on an Ubuntu server hosted by Digital Ocean; ho
 
 ## Built With
 
-* [Flask](http://flask.pocoo.org) - Python Microframework
-* [Pixelarity](https://pixelarity.com) - HTML 5 Responsive Design Layout
+* [Flask](http://flask.pocoo.org) - Python Microframework (BSD License)
+* [Pixelarity](https://pixelarity.com) - HTML 5 Responsive Design Layout [(License)](https://pixelarity.com/license)
 
 ## Authors
 
