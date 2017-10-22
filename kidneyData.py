@@ -1,53 +1,32 @@
-# 1: First Name
-# 2: Middle Initial
-# 3: Last Name
-# 4: Date of Birth
-# 5 Treatment Facility
-
 import csv
+import json
 
-class transportationForm:
-    def __init__(self, fName, midInitial, dob, treatFac, transType, address, financialInformation, socialWorkerName,
-                 socialWorkerSignature, financialNeedDescription, transportationProvider,
-                 tripDate, tripCost, tripOrigin, tripDestination, travelDescription):
-        
-        individual = {'First Name': fName, 'Middle Initial': midInitial, 'Last Name': lname, 'dob': dob, 'treatFac':treatFac, 'Transportation Type': transType, 'Address': address,         'Financial Information': financialInformation,
-                       'Social Worker Name': socialWorkerName, 'Social Worker Signature': socialWorkerSignature,
-                       'Financial Need Description': financialNeedDescription, 'Transportation Provider': transportationProvider,
-                       'Trip Date': tripDate, 'Trip Cost': tripCost, 'Trip Origin': tripOrigin, 'Trip Destination': tripDestination,
-                       'Travel Description': travelDescription}
 
-        columnTitleRow = "First Name, Middle Initial, Last Name, Date of Birth, Treatment Facility, Transportation Type, Address, Financial Information, Social Worker Name, Social Worker Signature, Financial Need Description, Transportation Provider, Trip Date, Trip Cost, Trip Origin, Trip Destination, Travel Description\n"
+class form():
 
-        with open(fName + 'TransportationCSV.csv', 'wb') as f:
-            f.write(columnTitleRow)
-            w = csv.writer(f)
-            w.writerow(individual.values())
+        def __init__(self, dictionary, formNum):
 
-class medForm():
-    def __init__(self, fName, midInitial, dob, treatFac, address, financialInformation, socialWorkerName,
-                 medicationName, prescribingPhysician, dosage, dateApplied, quantities, refills, accepted):
-        
-        individual = {'First Name': fName, 'Middle Initial': midInitial, 'Last Name': lname, 'dob': dob, 'treatFac':treatFac,'Address': address, 'Financial Information': financialInformation, 'Social Worker Name': socialWorkerName, 'Medication Name':
-             medicationName, 'Prescribing Physician': prescribingPhysician, 'Dosage': dosage, 'Date Applied': dateApplied, 'Quantities': quantities,
-             'Refills': refills, 'Accepted': accepted}
+            str = ''
 
-        columnTitleRow = "First Name, Middle Initial, Last Name, Date of Birth, Treatment Facility, Address, Financial Information, Social Worker Name, Medication Name, Prescribing Physician, Dosage," \
-                         "Date Applied, Quantities, Refills, Accepted"
-        csv.write(columnTitleRow)
+            if formNum == 1:
+                str = 'medicalform.csv'
+            elif formNum == 2:
+                str = 'transportationform.csv'
+            elif formNum == 3:
+                str = 'financialform.csv'
+            else:
+                str = 'form.csv'
 
-        with open(fName + 'MedCSV.csv', 'wb') as f:
-            f = csv.writer(f)
-            w.writerow(individual.values())
+            filename = dictionary['lastname'] + dictionary['firstname'] + str
 
-class financeForm():
-    def __init__(fName, midInitial, lname, dob, address):
+            with open(filename, 'w') as f:
+                w = csv.writer(f)
+                w.writerow(dictionary.keys())
+                w.writerow(dictionary.values())
+            f.close()
 
-        individual = {'First Name': fName, 'Middle Initial': midInitial, 'Last Name': lname, 'Date of Birth': dob, 'Address': address}
 
-        columnTitleRow = "First Name, Middle Initial, Last Name, Date of Birth, Address"
-        csv.write(columnTitleRow)
+def start(jsonString, formNum):
+    python_object = json.loads(jsonString)
+    foo = form(python_object, formNum)
 
-        with open(fName + 'FinanceCSV.csv', 'wb') as f:
-            f = csv.writer(f)
-            w.writerow(individual.values())
