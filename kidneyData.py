@@ -20,7 +20,7 @@ class transportationForm:
 
         columnTitleRow = "First Name, Middle Initial, Date of Birth, Treatment Facility, Transportation Type, Address, Financial Information, Social Worker Name, Social Worker Signature, Financial Need Description, Transportation Provider, Trip Date, Trip Cost, Trip Origin, Trip Destination, Travel Description\n"
 
-        with open('mycsvfile.csv', 'wb') as f:
+        with open(fName + 'mycsvfile.csv', 'wb') as f:
             f.write(columnTitleRow)
             w = csv.writer(f)
             w.writerow(individual.values())
@@ -37,8 +37,6 @@ class medForm():
                          "Date Applied, Quantities, Refills, Accepted"
         csv.write(columnTitleRow)
 
-        with open('mycsvfile.csv', 'wb') as f:
+        with open(fName + 'mycsvfile.csv', 'wb') as f:
             f = csv.writer(f)
             w.writerow(individual.values())
-
-foo = transportationForm("bailey","bailey","bailey","bailey","bailey", "bailey", "bailey", "bailey", "bailey", "bailey", "bailey", "bailey", "bailey", "bailey", "bailey", "bailey")
