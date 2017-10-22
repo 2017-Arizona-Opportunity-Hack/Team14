@@ -1,7 +1,9 @@
 from flask import Flask, render_template, jsonify, request
+from flask_compress import Compress
 import csv, kidneyData, json
 
 app = Flask(__name__)
+Compress(app)
 
 @app.route('/')
 def index():
