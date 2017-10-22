@@ -10,7 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
 	<body>
@@ -37,17 +37,15 @@
                                     </tr>
                                     <tr>    
                                         <td style="text-align: left">
-                                            <input type="radio" id="type-buspass" name="transportation-type" value="Van Tran" />
-                                            <label for="type-buspass">Van Tran</label>
-                                            <input type="radio" id="type-buspass" name="transportation-type" value="Bus Pass" />
+                                            <input type="radio" id="type-buspass" name="type" value="Bus Pass" />
                                             <label for="type-buspass">Bus Pass</label>
-                                            <input type="radio" id="type-DARtickets" name="transportation-type" value="D-A-R Tickets" />
+                                            <input type="radio" id="type-DARtickets" name="type" value="D-A-R Tickets" />
                                             <label for="type-DARtickets">D-A-R Tickets</label>
-                                            <input type="radio" id="type-cab" name="transportation-type" value="Cab" />
+                                            <input type="radio" id="type-cab" name="type" value="Cab" />
                                             <label for="type-cab">Cab</label>
-                                            <input type="radio" id="type-gas" name="transportation-type" value="Gas" />
+                                            <input type="radio" id="type-gas" name="type" value="Gas" />
                                             <label for="type-gas">Gas</label>
-                                            <input type="radio" id="type-other" name="transportation-type" value="Other" />
+                                            <input type="radio" id="type-other" name="type" value="Other" />
                                             <label for="type-other">Other</label>
                                         </td>
                                     </tr>
@@ -58,7 +56,7 @@
                                     </tr>
                                     <tr>
                                         <td class="month">
-                                            <select name="submission-month" id="today-month">
+                                            <select name="month" id="today-month">
                                                 <option value="00">Month</option>
                                                 <option value="01">January</option>
                                                 <option value="02">February</option>
@@ -75,7 +73,7 @@
                                             </select>
                                         </td>
                                         <td class="day">
-                                            <select name="submission-day" id="today-day">
+                                            <select name="day" id="today-day">
                                                 <option value="00">Day</option>
                                                 <option value="01">1</option>
                                                 <option value="02">2</option>
@@ -111,7 +109,7 @@
                                             </select>
                                         </td>
                                         <td class="year">
-                                            <input type="text" name="submission-year" id="today-year" value="" placeholder="Year" />
+                                            <input type="text" name="year" id="today-year" value="" placeholder="Year" />
                                         </td>
                                     </tr>
                                 </table>
@@ -140,7 +138,7 @@
                                     </tr>
                                     <tr>
                                         <td colspan=3>
-                                            <input type="text" name="address-street" id="address-street" value="" placeholder="Street Address" />
+                                            <input type="text" name="address-street1" id="address-street1" value="" placeholder="Street Address" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -218,7 +216,7 @@
                                     </tr>
                                     <tr>
                                         <td class="month">
-                                            <select name="trip-month" id="trip-month">
+                                            <select name="month" id="trip-month">
                                                 <option value="00">Month</option>
                                                 <option value="01">January</option>
                                                 <option value="02">February</option>
@@ -235,7 +233,7 @@
                                             </select>
                                         </td>
                                         <td class="day">
-                                            <select name="trip-day" id="trip-day">
+                                            <select name="day" id="trip-day">
                                                 <option value="00">Day</option>
                                                 <option value="01">1</option>
                                                 <option value="02">2</option>
@@ -271,7 +269,7 @@
                                             </select>
                                         </td>
                                         <td class="year">
-                                            <input type="text" name="trip-year" id="trip-year" value="" placeholder="Year" />
+                                            <input type="text" name="year" id="trip-year" value="" placeholder="Year" />
                                         </td>
                                     </tr>
                                 </table>
@@ -281,16 +279,16 @@
                                     </tr>
                                     <tr>
                                         <td>
-								            <input type="text" name="cost" id="cost" value="" placeholder="Cost" />
+								            <input type="text" name="year" id="cost" value="" placeholder="Cost" />
                                         </td>
                                     </tr>
                                 </table>
                                 <table>
                                     <tr>
                                         <td style="float:left">
-                                            <input type="radio" id="triptype-oneway" name="trip-type" value="One-Way" />
+                                            <input type="radio" id="triptype-oneway" name="triptype" value="One-Way" />
                                             <label for="triptype-oneway">One-Way</label>
-                                            <input type="radio" id="triptype-roundtrip" name="trip-type" value="Round Trip"/>
+                                            <input type="radio" id="triptype-roundtrip" name="triptype" value="Round Trip"/>
                                             <label for="triptype-roundtrip">Round Trip</label>
                                         </td>
                                     </tr>
@@ -312,7 +310,7 @@
                                 <table>
                                     <tr>
                                         <td>
-								            <input type="submit" value="Submit" class="special" onClick="run()" />
+								            <input type="button" value="Submit" class="special" onClick="run()" />
                                         </td>
                                     </tr>
                                 </table>
@@ -323,7 +321,7 @@
             </section>
 
         <!-- Scripts -->  
-        <script type="text/javascript" src = "{{ url_for('static', filename = 'script.js') }}"></script>
+        <script type="text/javascript" src="assets/js/script.js"></script>
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/jquery.scrolly.min.js"></script>
         <script src="assets/js/skel.min.js"></script>
